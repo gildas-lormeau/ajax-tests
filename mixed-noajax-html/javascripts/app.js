@@ -3,6 +3,18 @@
 
   var $doc = $(document),
       Modernizr = window.Modernizr;
+  
+  function route() {
+		var pageName = location.href.split("/").pop();
+		$("article").addClass("hide");
+		if (pageName == "" || pageName == "biography") {
+			$(".biography").removeClass("hide");
+		} else if (pageName == "albums") {
+			$(".albums").removeClass("hide");
+		} else if (pageName == "singles") {
+			$(".singles").removeClass("hide");
+		}
+	}
 
   $(document).ready(function() {
     $.fn.foundationAlerts           ? $doc.foundationAlerts() : null;
@@ -18,6 +30,16 @@
     $.fn.foundationClearing         ? $doc.foundationClearing() : null;
 
     $.fn.placeholder                ? $('input, textarea').placeholder() : null;
+    
+    $(".side-nav").on("click", "a", function(event) {
+		event.preventDefault();
+		history.pushState(null, null, this.href);
+		route();
+	});
+	$(window).on("popstate", route);
+	
+	route();
+	
   });
 
   // UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
