@@ -1,11 +1,10 @@
 {
 	"title": "Albums",
 	"list" : [
-		{ "year": "2002", "content": "Temps mort"}, 
-		{ "year": "2004", "content": "Panthéon"},
-		{ "year": "2006", "content": "Ouest Side"},
-		{ "year": "2008", "content": "0.9"},
-		{ "year": "2010", "content": "Lunatic"},
-		{ "year": "2012", "content": "Futur"}
+		{ "year": "2003", "content": "Nolwenn"}, 
+		{ "year": "2005", "content": "Histoires Naturelles"},
+		{ "year": "2009", "content": "Le Cheshire Cat et moi"},
+		{ "year": "2010", "content": "Bretonne"},
+		{ "year": "2012", "content": "Ô Filles de l'Eau"}
 	]
 }

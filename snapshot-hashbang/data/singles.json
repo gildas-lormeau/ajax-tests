@@ -1,18 +1,22 @@
 {
 	"title": "Singles",
 	"list" : [
-		{ "year": "2002", "content": "Destinée (feat. Kayna Samet)"}, 
-		{ "year": "2004", "content": "Avant de partir (feat. Léya Masry)"},
-		{ "year": "2006", "content": "Au bout des rêves (feat. Trade Union & Mister Rudie)"},
-		{ "year": "2010", "content": "Caesar Palace (feat. Diddy)"},
-		{ "year": "2010", "content": "Ma Couleur"},
-		{ "year": "2010", "content": "Jour de Paye"},
-		{ "year": "2011", "content": "Paradis"},
-		{ "year": "2011", "content": "Paname"},
-		{ "year": "2011", "content": "Bakel City Gang"},
-		{ "year": "2011", "content": "Vaisseau Mère"},
-		{ "year": "2011", "content": "Scarface"},
-		{ "year": "2012", "content": "Caramel"},
-		{ "year": "2012", "content": "C'est la vie (feat. 2 Chainz)"}
+		{ "year": "2003", "content": "Cassé"},
+		{ "year": "2003", "content": "Une Femme Cachée"},
+		{ "year": "2003", "content": "Suivre Une Etoile"},
+		{ "year": "2004", "content": "Inévitablement"},
+		{ "year": "2006", "content": "Nolwenn Ohwo!"},
+		{ "year": "2006", "content": "Histoire Naturelle"},
+		{ "year": "2006", "content": "Mon Ange"},
+		{ "year": "2007", "content": "J'aimais Tant L'Aimer"},
+		{ "year": "2007", "content": "Reste Encore"},
+		{ "year": "2009", "content": "Faut-il, Faut-il Pas ?"},
+		{ "year": "2010", "content": "Suite Sudarmoricaine"},
+		{ "year": "2010", "content": "La Jument de Michao"},
+		{ "year": "2010", "content": "Tri Martolod"},
+		{ "year": "2010", "content": "Brest"},
+		{ "year": "2010", "content": "Moonlight Shadow"},
+		{ "year": "2010", "content": "To France"},
+		{ "year": "2010", "content": "Juste pour me souvenir"}
 	]
 }
