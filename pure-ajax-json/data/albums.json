@@ -1,11 +1,10 @@
 {
 	"title": "Albums",
 	"list" : [
-		{ "year": "2002", "content": "Temps mort"}, 
-		{ "year": "2004", "content": "Panthéon"},
-		{ "year": "2006", "content": "Ouest Side"},
-		{ "year": "2008", "content": "0.9"},
-		{ "year": "2010", "content": "Lunatic"},
-		{ "year": "2012", "content": "Futur"}
+		{ "year": "2009", "content": "Des maisons"}, 
+		{ "year": "2010", "content": "Dans tes reves"},
+		{ "year": "2010", "content": "Voil&agrve; les anges"},
+		{ "year": "2010", "content": "Brutal Hearts"},
+		{ "year": "2011", "content": "Noel Blanc"}
 	]
 }
