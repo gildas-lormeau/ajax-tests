@@ -58,5 +58,5 @@ app.configure("production", function() {
     app.use(express.vhost("pure-js.local", require("./servers/pure-js.js")));
     app.use(express.vhost("hash-bang.local", require("./servers/hash-bang.js")));
     app.use(express.vhost("pushstate.local", require("./servers/pushstate.js")));
-    app.listen(80);
+    app.listen(process.env.PORT || 5000);
 });

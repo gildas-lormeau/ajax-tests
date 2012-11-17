@@ -1,10 +1,15 @@
 var express = require("express");
-var staticDirectory = __dirname + "../pure-js";
+var fs = require("fs");
+var staticDirectory = fs.realpathSync(__dirname + "/../mixed-ajax-json");
 var app = express();
 
 app.use(express["static"](staticDirectory));
 
-app.get("/discography", function(req, res, next) {
+app.get("/albums", function(req, res, next) {
+    res.sendfile(staticDirectory + "/index.html");
+});
+
+app.get("/singles", function(req, res, next) {
     res.sendfile(staticDirectory + "/index.html");
 });
 
