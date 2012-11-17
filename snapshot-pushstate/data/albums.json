@@ -1,11 +1,10 @@
 {
 	"title": "Albums",
 	"list" : [
-		{ "year": "2002", "content": "Temps mort"}, 
-		{ "year": "2004", "content": "Panthéon"},
-		{ "year": "2006", "content": "Ouest Side"},
-		{ "year": "2008", "content": "0.9"},
-		{ "year": "2010", "content": "Lunatic"},
-		{ "year": "2012", "content": "Futur"}
+		{ "year": "1999", "content": "Billy Crawford"}, 
+		{ "year": "2002", "content": "Ride"},
+		{ "year": "2005", "content": "Big City"},
+		{ "year": "2007", "content": "It's Time"},
+		{ "year": "2009", "content": "Groove"}
 	]
 }

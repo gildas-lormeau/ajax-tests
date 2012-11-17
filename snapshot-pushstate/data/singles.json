@@ -1,18 +1,20 @@
 {
 	"title": "Singles",
 	"list" : [
-		{ "year": "2002", "content": "Destinée (feat. Kayna Samet)"}, 
-		{ "year": "2004", "content": "Avant de partir (feat. Léya Masry)"},
-		{ "year": "2006", "content": "Au bout des rêves (feat. Trade Union & Mister Rudie)"},
-		{ "year": "2010", "content": "Caesar Palace (feat. Diddy)"},
-		{ "year": "2010", "content": "Ma Couleur"},
-		{ "year": "2010", "content": "Jour de Paye"},
-		{ "year": "2011", "content": "Paradis"},
-		{ "year": "2011", "content": "Paname"},
-		{ "year": "2011", "content": "Bakel City Gang"},
-		{ "year": "2011", "content": "Vaisseau Mère"},
-		{ "year": "2011", "content": "Scarface"},
-		{ "year": "2012", "content": "Caramel"},
-		{ "year": "2012", "content": "C'est la vie (feat. 2 Chainz)"}
+		{ "year": "1998", "content": "Urgently in Love"}, 
+		{ "year": "1999", "content": "Supernatural"},
+		{ "year": "1999", "content": "Mary Lopez"},
+		{ "year": "2001", "content": "When You're in Love with Someone"},
+		{ "year": "2002", "content": "Trackin'"},
+		{ "year": "2002", "content": "When You Think About Me"},
+		{ "year": "2002", "content": "You Didn't Expect That"},
+		{ "year": "2003", "content": "Me passer de toi (Someone Like You)"},
+		{ "year": "2004", "content": "Bright Lights"},
+		{ "year": "2005", "content": "Steamy Nights"},
+		{ "year": "2007", "content": "It's Time"},
+		{ "year": "2007", "content": "Like That"},
+		{ "year": "2009", "content": "Steal Away"},
+		{ "year": "2009", "content": "Human Nature"},
+		{ "year": "2010", "content": "You've Got a Friend"}
 	]
 }
