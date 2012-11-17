@@ -3,50 +3,17 @@
 	"use strict";
 
 	var $doc = $(document), Modernizr = window.Modernizr;
-	
-	function renderBiography(data) {
-		var html = '<div class="row"><div class="six columns">';
-		html += '<p>' + data.paragraphs[0] + '</p>';
-		html += '<p>' + data.paragraphs[1] + '</p>';
-		html += '</div><div class="six columns">';
-		html += '<img src="' + data.image + '">';
-		html += '</div></div>';
-		html += '<p>' + data.paragraphs[2] + '</p>';
-		return html;
-	}
-	
-	function renderList(data) {
-		var html = '<ul class="no-bullet">';
-		$.each(data.list, function(index, item) {
-			html += '<li><strong>' + item.year + '</strong> : ' + item.content + '</li>';
-		});
-		return html;
-	}
-	
+
 	function route() {
-		var pageName = location.href.split("/").pop();
-		if (pageName == "" || pageName == "biography") {
+		var pageName = location.hash.split("#!")[1];
+		if (!pageName) {
+			pageName = "biography";
+		}
+		if (pageName == "biography" || pageName == "albums" || pageName == "singles") {
 			$.ajax({
-				url : "data/biography.json",
+				url : "data/" + pageName + ".html",
 				success : function(data) {
-					$(".main-link").html(data.title);
-					$(".main-content").html(renderBiography(data));
-				}
-			});
-		} else if (pageName == "albums") {
-			$.ajax({
-				url : "data/albums.json",
-				success : function(data) {
-					$(".main-link").html(data.title);
-					$(".main-content").html(renderList(data));
-				}
-			});
-		} else if (pageName == "singles") {
-			$.ajax({
-				url : "data/singles.json",
-				success : function(data) {
-					$(".main-link").html(data.title);
-					$(".main-content").html(renderList(data));
+					$(".main-content").html(data);
 				}
 			});
 		}
@@ -69,13 +36,8 @@
 
 		$.fn.placeholder ? $("input, textarea").placeholder() : null;
 		
-		$(".side-nav").on("click", "a", function(event) {
-			event.preventDefault();
-			history.pushState(null, null, this.href);
-			route();
-		});
-		$(window).on("popstate", route);
-		
+		$(window).on("hashchange", route);
+
 		route();
 	});
 
@@ -92,6 +54,6 @@
 				window.scrollTo(0, 1);
 			}, 0);
 		});
-	}	
+	}
 
 })(jQuery, this);
