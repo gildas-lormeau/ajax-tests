@@ -55,13 +55,13 @@ app.configure("production", function() {
         json: true,
         level: "info"
     });
-    app.use(express.vhost("ajax-test.herokuapp.com", require("./servers/pure-html.js")));
-    app.use(express.vhost("a.ajax-test.herokuapp.com", require("./servers/mixed-ajax-html.js")));
-    app.use(express.vhost("mixed-ajax-json.local", require("./servers/mixed-ajax-json.js")));
-    app.use(express.vhost("mixed-noajax-html.local", require("./servers/mixed-noajax-html.js")));
-    app.use(express.vhost("mixed-noajax-json.local", require("./servers/mixed-noajax-json.js")));
-    app.use(express.vhost("pure-js.local", require("./servers/pure-js.js")));
-    app.use(express.vhost("snapshot-hashbang.local", require("./servers/hash-bang.js")));
-    app.use(express.vhost("snapshot-pushstate.local", require("./servers/pushstate.js")));
+    app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/pure-html.js")));
+    app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/mixed-ajax-html.js")));
+    app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/mixed-ajax-json.js")));
+    app.use(express.vhost("etienne-daho.fanclub.herokuapp.com", require("./servers/mixed-noajax-html.js")));
+    app.use(express.vhost("jenifer.fanclub.herokuapp.com", require("./servers/mixed-noajax-json.js")));
+    app.use(express.vhost("coeur-de-piratefanclub.herokuapp.com", require("./servers/pure-js.js")));
+    app.use(express.vhost("nolwenn-leroy.fanclub.herokuapp.com", require("./servers/hash-bang.js")));
+    app.use(express.vhost("billy-crawfordfanclub.herokuapp.com", require("./servers/pushstate.js")));
     app.listen(process.env.PORT || 5000);
 });
