@@ -60,8 +60,8 @@ app.configure("production", function() {
     app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/mixed-ajax-json.js")));
     app.use(express.vhost("etienne-daho.fanclub.herokuapp.com", require("./servers/mixed-noajax-html.js")));
     app.use(express.vhost("jenifer.fanclub.herokuapp.com", require("./servers/mixed-noajax-json.js")));
-    app.use(express.vhost("coeur-de-piratefanclub.herokuapp.com", require("./servers/pure-js.js")));
+    app.use(express.vhost("coeur-de-pirate.fanclub.herokuapp.com", require("./servers/pure-js.js")));
     app.use(express.vhost("nolwenn-leroy.fanclub.herokuapp.com", require("./servers/hash-bang.js")));
-    app.use(express.vhost("billy-crawfordfanclub.herokuapp.com", require("./servers/pushstate.js")));
+    app.use(express.vhost("billy-crawford.fanclub.herokuapp.com", require("./servers/pushstate.js")));
     app.listen(process.env.PORT || 5000);
 });
