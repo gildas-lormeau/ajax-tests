@@ -12,6 +12,7 @@ var expressLevel = {
     }
 };
 
+console.log("rrrrr");
 var expressLogger = new(winston.Logger)({
     levels: expressLevel.levels
 });
