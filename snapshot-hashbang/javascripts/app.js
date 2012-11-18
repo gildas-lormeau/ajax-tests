@@ -41,7 +41,7 @@
 		if (!pageName) {
 			pageName = "biography";
 		}
-		if (pageName == "" || pageName == "biography") {
+		if (pageName == "biography") {
 			$(".body").html(renderMain());
 			$.ajax({
 				url : "data/biography.json",
