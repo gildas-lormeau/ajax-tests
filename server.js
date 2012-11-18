@@ -12,7 +12,6 @@ var expressLevel = {
     }
 };
 
-console.log("rrrrr");
 var expressLogger = new(winston.Logger)({
     levels: expressLevel.levels
 });
@@ -57,7 +56,7 @@ app.configure("production", function() {
         level: "info"
     });
     app.use(express.vhost("ajax-test.herokuapp.com", require("./servers/pure-html.js")));
-    app.use(express.vhost("mixed-ajax-html.local", require("./servers/mixed-ajax-html.js")));
+    app.use(express.vhost("a.ajax-test.herokuapp.com", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("mixed-ajax-json.local", require("./servers/mixed-ajax-json.js")));
     app.use(express.vhost("mixed-noajax-html.local", require("./servers/mixed-noajax-html.js")));
     app.use(express.vhost("mixed-noajax-json.local", require("./servers/mixed-noajax-json.js")));
