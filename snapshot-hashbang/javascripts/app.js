@@ -6,7 +6,7 @@
 	
 	function renderMain() {
 		var html = '<div class="row"><div class="twelve columns">';
-		html += '<h1><small>Welcome to to the Booba fanclub site!</small></h1><hr />';
+		html += '<h1><small>Welcome to to the Nolwenn Leroy fanclub site!</small></h1><hr />';
 		html += '</div></div><div class="row"><div class="nine columns" role="content">';
 		html += '<article class="main-article"><h3><a class="main-link" href=""></a></h3><div class="main-content">';
 		html += '</div></article></div><aside class="three columns">';
