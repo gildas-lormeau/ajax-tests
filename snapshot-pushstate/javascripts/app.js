@@ -85,7 +85,7 @@
 
 		$.fn.placeholder ? $("input, textarea").placeholder() : null;
 		
-		$("body").on(".side-nav click", "a", function(event) {
+		$("body").on("click", ".side-nav a", function(event) {
 			event.preventDefault();
 			history.pushState(null, null, this.href);
 			route();
