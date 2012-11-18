@@ -5,32 +5,37 @@ require("winston-loggly");
 
 var expressLevel = {
     levels: {
-        write: 0
+        info: 0
     },
     colors: {
-        write: "green"
+        info: "green"
     }
 };
 
 var expressLogger = new(winston.Logger)({
     levels: expressLevel.levels
 });
+expressLogger.write = function(log) {
+    expressLogger.info(JSON.parse(log));
+};
 
+express.logger.token('headers', function(req, res){ return JSON.stringify(req.headers); });
 
 //winston.write = winston.silly;
 var app = express();
 app.use(express.logger({
-    stream: expressLogger
+    stream: expressLogger,
+    format: '{"date" : ":date", "method" : ":method", "http-version" : ":http-version", "status" : ":status", "resource" : ":url", "referrer" : ":referrer", "headers" : :headers}'
 }));
 app.configure("development", function() {
     expressLogger.add(winston.transports.Console, {
-        level: "write"
+        level: "info"
     });
     expressLogger.add(winston.transports.Loggly, {
         inputToken: "939d6837-96a8-4535-934b-03d4dbbe1534",
         subdomain: "brojax",
         json: true,
-        level: "write"
+        level: "info"
     });
     app.use(express.vhost("pure-html.local", require("./servers/pure-html.js")));
     app.use(express.vhost("mixed-ajax-html.local", require("./servers/mixed-ajax-html.js")));
@@ -48,7 +53,7 @@ app.configure("production", function() {
         inputToken: "40a3143b-2575-4054-9af0-5461df3980df",
         subdomain: "brojax",
         json: true,
-        level: "write"
+        level: "info"
     });
     app.use(express.vhost("willy-denzey.domain.com", require("./servers/pure-html.js")));
     app.use(express.vhost("mixed-ajax-html.local", require("./servers/mixed-ajax-html.js")));
