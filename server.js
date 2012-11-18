@@ -37,7 +37,7 @@ app.configure("development", function() {
     app.use(express.vhost("mixed-ajax-json.local", require("./servers/mixed-ajax-json.js")));
     app.use(express.vhost("mixed-noajax-html.local", require("./servers/mixed-noajax-html.js")));
     app.use(express.vhost("mixed-noajax-json.local", require("./servers/mixed-noajax-json.js")));
-    app.use(express.vhost("pure-js.local", require("./servers/pure-js.js")));
+    app.use(express.vhost("pure-ajax-json.local", require("./servers/pure-js.js")));
     app.use(express.vhost("snapshot-hashbang.local", require("./servers/hash-bang.js")));
     app.use(express.vhost("snapshot-pushstate.local", require("./servers/pushstate.js")));
     app.listen(3000);
