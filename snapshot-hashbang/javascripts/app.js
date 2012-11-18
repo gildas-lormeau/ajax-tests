@@ -40,6 +40,8 @@
 		var pageName = location.hash.split("#!")[1];
 		if (!pageName) {
 			pageName = "biography";
+		} else {
+			$("meta[name=fragment]").remove();
 		}
 		if (pageName == "biography") {
 			$(".body").html(renderMain());
