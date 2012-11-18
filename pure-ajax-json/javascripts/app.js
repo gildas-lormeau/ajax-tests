@@ -37,7 +37,7 @@
 	}
 	
 	function route() {
-		var pageName = location.href.split("/").pop();
+		var pageName = location.pathname.split("/").pop();
 		if (pageName == "" || pageName == "biography") {
 			$(".body").html(renderMain());
 			$.ajax({

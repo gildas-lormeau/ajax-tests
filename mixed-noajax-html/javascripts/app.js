@@ -5,7 +5,7 @@
       Modernizr = window.Modernizr;
   
   function route() {
-		var pageName = location.href.split("/").pop();
+		var pageName = location.pathname.split("/").pop();
 		$("article").addClass("hide");
 		if (pageName == "" || pageName == "biography") {
 			$(".biography").removeClass("hide");
