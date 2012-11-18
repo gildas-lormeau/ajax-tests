@@ -5,12 +5,13 @@ var staticDirectory = fs.realpathSync(__dirname + "/../snapshot-pushstate");
 var app = express();
 
 app.use(function(req, res, next) {
+    console.log(req.url);
     if(req.url.indexOf("_escaped_fragment_") != -1) {
         var headers = {
-            authorization: "56cb278f7815e0d5e83d2bcfbe35286d"
+            authorization: "3dee3ffdcdba5c8c406c72ccf4891ee1"
         };
-        headers["x-domain"] = "http://appcharts.cloudfoundry.com";
-        var reqUrl = "http://brojax-development-api.aws.af.cm/";
+        headers["x-domain"] = "http://billy-crawford.fanclub.herokuapp.com";
+        var reqUrl = "http://brojax-development-api.aws.af.cm";
         reqUrl += req.url;
         request.get({
             url: reqUrl,
