@@ -55,7 +55,7 @@ app.configure("production", function() {
         json: true,
         level: "info"
     });
-    app.use(express.vhost("willy-denzey.domain.com", require("./servers/pure-html.js")));
+    app.use(express.vhost("ajax-test.herokuapp.com", require("./servers/pure-html.js")));
     app.use(express.vhost("mixed-ajax-html.local", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("mixed-ajax-json.local", require("./servers/mixed-ajax-json.js")));
     app.use(express.vhost("mixed-noajax-html.local", require("./servers/mixed-noajax-html.js")));
