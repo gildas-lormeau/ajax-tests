@@ -10,4 +10,16 @@
   <loc>http://jenifer.fanclub.herokuapp.com/</loc>
   <lastmod>2012-11-18T23:44:57+00:00</lastmod>
 </url>
+<url>
+  <loc>http://jenifer.fanclub.herokuapp.com/#!biography</loc>
+  <lastmod>2012-11-18T23:44:57+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jenifer.fanclub.herokuapp.com/#!albums</loc>
+  <lastmod>2012-11-18T23:44:57+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jenifer.fanclub.herokuapp.com/#!singles</loc>
+  <lastmod>2012-11-18T23:44:57+00:00</lastmod>
+</url>
 </urlset>
