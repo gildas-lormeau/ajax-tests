@@ -89,8 +89,8 @@
 		"image": "images/jenifer.jpg",
 		"paragraphs": 	[
 						"Jenifer, born as Jenifer Yaël Dadouche-Bartoli the 15th of November 1982 in Nice, is a pop singer revelead by the French television show Star Academy France in 2002. She got a certain success with a number of hit singles in the French, Belgium and Swiss charts.",
-						"Just after her victory, she released a fisrt single \"J'attends L'amour\", which encountered a real success. And a few later, followed a road tour as a solo artist from October 2002 until January 2003. During this road tour she performed at the Paris Olympia, one of his dream child.",
-						"Her fisrt album, entitled Jenifer, written by Marc Lavoine, sold over three quarters of a million copies. Re-released later to include two two new tracks: \"Entre Humains\" and \"Des Mots Qui Résonnent\", this new version sold aver a million copies."
+						"Just after her victory, she released a first single \"J'attends L'amour\", which encountered a real success. And a few later, followed a road tour as a solo artist from October 2002 until January 2003. During this road tour she performed at the Paris Olympia, one of his dream child.",
+						"Her first album, entitled Jenifer, written by Marc Lavoine, sold over three quarters of a million copies. Re-released later to include two two new tracks: \"Entre Humains\" and \"Des Mots Qui Résonnent\", this new version sold aver a million copies."
 						]
 	};
 
