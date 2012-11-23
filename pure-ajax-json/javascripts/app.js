@@ -10,7 +10,7 @@
 		html += '</div></div><div class="row"><div class="nine columns" role="content">';
 		html += '<article class="main-article"><h3><a class="main-link" href=""></a></h3><div class="main-content">';
 		html += '</div></article></div><aside class="three columns">';
-		html += '<ul class="side-nav"><li><a href="biography">Biography</a></li><li><a href="albums">Albums</a></li>';
+		html += '<ul class="side-nav"><li><a href="./">Biography</a></li><li><a href="albums">Albums</a></li>';
 		html += '<li><a href="singles">Singles</a></li></ul></aside></div>';
 		html += '<footer class="row"><div class="twelve columns"><hr /><div class="row"><div class="six columns">';
 		html += '</div><div class="six columns"></div></div></div></footer>';
@@ -38,16 +38,7 @@
 	
 	function route() {
 		var pageName = location.pathname.split("/").pop();
-		if (pageName == "" || pageName == "biography") {
-			$(".body").html(renderMain());
-			$.ajax({
-				url : "data/biography.json",
-				success : function(data) {
-					$(".main-link").html(data.title);
-					$(".main-content").html(renderBiography(data));
-				}
-			});
-		} else if (pageName == "albums") {
+		if (pageName == "albums") {
 			$(".body").html(renderMain());
 			$.ajax({
 				url : "data/albums.json",
@@ -63,6 +54,15 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+				}
+			});
+		} else {
+			$(".body").html(renderMain());
+			$.ajax({
+				url : "data/biography.json",
+				success : function(data) {
+					$(".main-link").html(data.title);
+					$(".main-content").html(renderBiography(data));
 				}
 			});
 		}

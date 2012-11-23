@@ -13,7 +13,4 @@ app.get("/singles", function(req, res, next) {
     res.sendfile(staticDirectory + "/index.html");
 });
 
-app.get("/biography", function(req, res, next) {
-    res.sendfile(staticDirectory + "/index.html");
-});
 module.exports = app;

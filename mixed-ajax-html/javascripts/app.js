@@ -6,12 +6,9 @@
 
 	function route() {
 		var pageName = location.hash.split("#!")[1];
-		if (!pageName) {
-			pageName = "biography";
-		}
-		if (pageName == "biography" || pageName == "albums" || pageName == "singles") {
+		if (!pageName || pageName == "albums" || pageName == "singles") {
 			$.ajax({
-				url : "data/" + pageName + ".html",
+				url : "data/" + (pageName || "biography")+ ".html",
 				success : function(data) {
 					$(".main-content").html(data);
 				}

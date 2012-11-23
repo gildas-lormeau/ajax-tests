@@ -25,15 +25,7 @@
 	
 	function route() {
 		var pageName = location.pathname.split("/").pop();
-		if (pageName == "" || pageName == "biography") {
-			$.ajax({
-				url : "data/biography.json",
-				success : function(data) {
-					$(".main-link").html(data.title);
-					$(".main-content").html(renderBiography(data));
-				}
-			});
-		} else if (pageName == "albums") {
+		if (pageName == "albums") {
 			$.ajax({
 				url : "data/albums.json",
 				success : function(data) {
@@ -47,6 +39,14 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+				}
+			});
+		} else {
+			$.ajax({
+				url : "data/biography.json",
+				success : function(data) {
+					$(".main-link").html(data.title);
+					$(".main-content").html(renderBiography(data));
 				}
 			});
 		}

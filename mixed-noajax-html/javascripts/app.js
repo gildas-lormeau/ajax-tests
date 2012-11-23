@@ -7,12 +7,12 @@
   function route() {
 		var pageName = location.pathname.split("/").pop();
 		$("article").addClass("hide");
-		if (pageName == "" || pageName == "biography") {
-			$(".biography").removeClass("hide");
-		} else if (pageName == "albums") {
+		if (pageName == "albums") {
 			$(".albums").removeClass("hide");
 		} else if (pageName == "singles") {
 			$(".singles").removeClass("hide");
+		} else {
+			$(".biography").removeClass("hide");
 		}
 	}
 

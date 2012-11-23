@@ -3,20 +3,20 @@
 	"use strict";
 
 	var $doc = $(document), Modernizr = window.Modernizr;
-	
+
 	function renderMain() {
 		var html = '<div class="row"><div class="twelve columns">';
 		html += '<h1><small>Welcome to to the Billy Crawford fanclub site!</small></h1><hr />';
 		html += '</div></div><div class="row"><div class="nine columns" role="content">';
 		html += '<article class="main-article"><h3><a class="main-link" href=""></a></h3><div class="main-content">';
 		html += '</div></article></div><aside class="three columns">';
-		html += '<ul class="side-nav"><li><a href="biography">Biography</a></li><li><a href="albums">Albums</a></li>';
+		html += '<ul class="side-nav"><li><a href="./">Biography</a></li><li><a href="albums">Albums</a></li>';
 		html += '<li><a href="singles">Singles</a></li></ul></aside></div>';
 		html += '<footer class="row"><div class="twelve columns"><hr /><div class="row"><div class="six columns">';
 		html += '</div><div class="six columns"></div></div></div></footer>';
-		return html; 
+		return html;
 	}
-	
+
 	function renderBiography(data) {
 		var html = '<div class="row"><div class="six columns">';
 		html += '<p>' + data.paragraphs[0] + '</p>';
@@ -27,7 +27,7 @@
 		html += '<p>' + data.paragraphs[2] + '</p>';
 		return html;
 	}
-	
+
 	function renderList(data) {
 		var html = '<ul class="no-bullet">';
 		$.each(data.list, function(index, item) {
@@ -35,19 +35,10 @@
 		});
 		return html;
 	}
-	
+
 	function route() {
 		var pageName = location.pathname.split("/").pop();
-		if (pageName == "" || pageName == "biography") {
-			$(".body").html(renderMain());
-			$.ajax({
-				url : "data/biography.json",
-				success : function(data) {
-					$(".main-link").html(data.title);
-					$(".main-content").html(renderBiography(data));
-				}
-			});
-		} else if (pageName == "albums") {
+		if (pageName == "albums") {
 			$(".body").html(renderMain());
 			$.ajax({
 				url : "data/albums.json",
@@ -63,6 +54,15 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+				}
+			});
+		} else {
+			$(".body").html(renderMain());
+			$.ajax({
+				url : "data/biography.json",
+				success : function(data) {
+					$(".main-link").html(data.title);
+					$(".main-content").html(renderBiography(data));
 				}
 			});
 		}
@@ -84,14 +84,14 @@
 		$.fn.foundationClearing ? $doc.foundationClearing() : null;
 
 		$.fn.placeholder ? $("input, textarea").placeholder() : null;
-		
+
 		$("body").on("click", ".side-nav a", function(event) {
 			event.preventDefault();
 			history.pushState(null, null, this.href);
 			route();
 		});
 		$(window).on("popstate", route);
-		
+
 		route();
 	});
 
@@ -108,6 +108,6 @@
 				window.scrollTo(0, 1);
 			}, 0);
 		});
-	}	
+	}
 
 })(jQuery, this);
