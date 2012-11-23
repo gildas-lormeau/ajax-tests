@@ -55,13 +55,13 @@ app.configure("production", function() {
         json: true,
         level: "info"
     });
-    app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/pure-html.js")));
-    app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/mixed-ajax-html.js")));
-    app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/mixed-ajax-json.js")));
-    app.use(express.vhost("etienne-daho.fanclub.herokuapp.com", require("./servers/mixed-noajax-html.js")));
-    app.use(express.vhost("jenifer.fanclub.herokuapp.com", require("./servers/mixed-noajax-json.js")));
-    app.use(express.vhost("coeur-de-pirate.fanclub.herokuapp.com", require("./servers/pure-js.js")));
-    app.use(express.vhost("nolwenn-leroy.fanclub.herokuapp.com", require("./servers/hash-bang.js")));
-    app.use(express.vhost("billy-crawford.fanclub.herokuapp.com", require("./servers/pushstate.js")));
+    app.use(express.vhost("willy-denzey.buzzmyfanclub.com", require("./servers/pure-html.js")));
+    app.use(express.vhost("alizee.buzzmyfanclub.com", require("./servers/mixed-ajax-html.js")));
+    app.use(express.vhost("booba.buzzmyfanclub.com", require("./servers/mixed-ajax-json.js")));
+    app.use(express.vhost("etienne-daho.buzzmyfanclub.com", require("./servers/mixed-noajax-html.js")));
+    app.use(express.vhost("jenifer.buzzmyfanclub.com", require("./servers/mixed-noajax-json.js")));
+    app.use(express.vhost("coeur-de-pirate.buzzmyfanclub.com", require("./servers/pure-js.js")));
+    app.use(express.vhost("nolwenn-leroy.buzzmyfanclub.com", require("./servers/hash-bang.js")));
+    app.use(express.vhost("billy-crawford.buzzmyfanclub.com", require("./servers/pushstate.js")));
     app.listen(process.env.PORT || 5000);
 });
