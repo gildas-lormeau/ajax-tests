@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
         var headers = {
             authorization: "fed10eecf441b05153ab3ebd1780b43d"
         };
-        headers["x-domain"] = "http://nolwenn-leroy.fanclub.herokuapp.com";
+        headers["x-domain"] = "http://nolwenn-leroy.buzzmyfanclub.com";
         var reqUrl = "http://brojax-development-api.aws.af.cm";
         reqUrl += req.url;
         request.get({
