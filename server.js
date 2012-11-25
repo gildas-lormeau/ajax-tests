@@ -45,6 +45,7 @@ app.configure("development", function() {
     app.use(express.vhost("pure-ajax-json.local", require("./servers/pure-js.js")));
     app.use(express.vhost("snapshot-hashbang.local", require("./servers/hash-bang.js")));
     app.use(express.vhost("snapshot-pushstate.local", require("./servers/pushstate.js")));
+     app.use(express.vhost("snapshot-pushstate.buzzmyfanclub.local", require("./servers/redirect.js")));
     app.listen(3000);
 });
 
@@ -63,13 +64,13 @@ app.configure("production", function() {
     app.use(express.vhost("coeur-de-pirate.buzzmyfanclub.com", require("./servers/pure-js.js")));
     app.use(express.vhost("nolwenn-leroy.buzzmyfanclub.com", require("./servers/hash-bang.js")));
     app.use(express.vhost("billy-crawford.buzzmyfanclub.com", require("./servers/pushstate.js")));
-    // app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("etienne-daho.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("jenifer.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("coeur-de-pirate.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("nolwenn-leroy.fanclub.herokuapp.com", require("./servers/redirect.js")));
-    // app.use(express.vhost("billy-crawford.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("etienne-daho.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("jenifer.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("coeur-de-pirate.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("nolwenn-leroy.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("billy-crawford.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.listen(process.env.PORT || 5000);
 });
