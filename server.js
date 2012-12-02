@@ -37,6 +37,7 @@ app.configure("development", function() {
         json: true,
         level: "info"
     });
+    app.use(express.vhost("local", require("./servers/root.js")));
     app.use(express.vhost("pure-html.local", require("./servers/pure-html.js")));
     app.use(express.vhost("mixed-ajax-html.local", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("mixed-ajax-json.local", require("./servers/mixed-ajax-json.js")));
@@ -46,7 +47,7 @@ app.configure("development", function() {
     app.use(express.vhost("snapshot-hashbang.local", require("./servers/hash-bang.js")));
     app.use(express.vhost("snapshot-pushstate.local", require("./servers/pushstate.js")));
      app.use(express.vhost("snapshot-pushstate.buzzmyfanclub.local", require("./servers/redirect.js")));
-    app.listen(3000);
+     app.listen(3000);
 });
 
 app.configure("production", function() {
@@ -56,6 +57,7 @@ app.configure("production", function() {
         json: true,
         level: "info"
     });
+    app.use(express.vhost("buzzmyfanclub.com", require("./servers/root.js")));
     app.use(express.vhost("willy-denzey.buzzmyfanclub.com", require("./servers/pure-html.js")));
     app.use(express.vhost("alizee.buzzmyfanclub.com", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("booba.buzzmyfanclub.com", require("./servers/mixed-ajax-json.js")));
@@ -64,6 +66,7 @@ app.configure("production", function() {
     app.use(express.vhost("coeur-de-pirate.buzzmyfanclub.com", require("./servers/pure-js.js")));
     app.use(express.vhost("nolwenn-leroy.buzzmyfanclub.com", require("./servers/hash-bang.js")));
     app.use(express.vhost("billy-crawford.buzzmyfanclub.com", require("./servers/pushstate.js")));
+    app.use(express.vhost("fanclub.herokuapp.com", require("./servers/root.js")));
     app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/redirect.js")));
