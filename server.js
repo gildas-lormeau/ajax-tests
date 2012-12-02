@@ -66,7 +66,7 @@ app.configure("production", function() {
     app.use(express.vhost("coeur-de-pirate.buzzmyfanclub.com", require("./servers/pure-js.js")));
     app.use(express.vhost("nolwenn-leroy.buzzmyfanclub.com", require("./servers/hash-bang.js")));
     app.use(express.vhost("billy-crawford.buzzmyfanclub.com", require("./servers/pushstate.js")));
-    app.use(express.vhost("fanclub.herokuapp.com", require("./servers/root.js")));
+    app.use(express.vhost("fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/redirect.js")));
