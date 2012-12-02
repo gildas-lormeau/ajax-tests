@@ -57,7 +57,7 @@ app.configure("production", function() {
         json: true,
         level: "info"
     });
-    app.use(express.vhost("buzzmyfanclub.com", require("./servers/root.js")));
+    app.use(express.vhost("www.buzzmyfanclub.com", require("./servers/root.js")));
     app.use(express.vhost("willy-denzey.buzzmyfanclub.com", require("./servers/pure-html.js")));
     app.use(express.vhost("alizee.buzzmyfanclub.com", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("booba.buzzmyfanclub.com", require("./servers/mixed-ajax-json.js")));
