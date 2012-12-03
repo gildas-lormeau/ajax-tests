@@ -11,6 +11,15 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
+
+  <!-- Meta for Facebook Likes -->
+  <meta property="og:title" content="Willy Denzey's Biography"/>
+  <meta property="og:type" content="musician"/>
+  <meta property="og:image" content="http://willy-denzey.buzzmyfanclub.com/images/willy-denzey.jpg"/>
+  <meta property="og:url" content="http://willy-denzey.buzzmyfanclub.com/"/>
+  <meta property="og:site_name" content="Willy Denzey fanclub site"/>
+  <meta property="fb:admins" content="george.abitbol.1671"/>
+
   <title>Willy Denzey fanclub site!</title>
 
   <!-- Included CSS Files (Uncompressed) -->
@@ -49,7 +58,7 @@
 
       <article>
 
-        <h3><a href="index.html">Biography</a></h3>
+        <h3><a href="index.html">Biography</a></h3><div class="fb-like" data-href="http://willy-denzey.buzzmyfanclub.com/" data-send="false" data-width="450" data-show-faces="false" data-layout="button_count"></div>
         <h6>Written by <strong>Bob Smith</strong> on November 16, 2012.</h6>
 
         <div class="row">
@@ -115,6 +124,18 @@
   </footer>
 
   <!-- End Footer -->
+
+  <!-- Facebook like button HTML5-->
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <!-- Included JS Files (Uncompressed) -->
   
