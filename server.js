@@ -41,6 +41,7 @@ app.configure("development", function() {
     app.use(express.vhost("pure-html.local", require("./servers/pure-html.js")));
     app.use(express.vhost("mixed-ajax-html.local", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("mixed-ajax-json.local", require("./servers/mixed-ajax-json.js")));
+    app.use(express.vhost("mixed-jsonp-json.local", require("./servers/mixed-jsonp-json.js")));
     app.use(express.vhost("mixed-noajax-html.local", require("./servers/mixed-noajax-html.js")));
     app.use(express.vhost("mixed-noajax-json.local", require("./servers/mixed-noajax-json.js")));
     app.use(express.vhost("pure-ajax-json.local", require("./servers/pure-js.js")));
@@ -61,6 +62,7 @@ app.configure("production", function() {
     app.use(express.vhost("willy-denzey.buzzmyfanclub.com", require("./servers/pure-html.js")));
     app.use(express.vhost("alizee.buzzmyfanclub.com", require("./servers/mixed-ajax-html.js")));
     app.use(express.vhost("booba.buzzmyfanclub.com", require("./servers/mixed-ajax-json.js")));
+    app.use(express.vhost("la-fouine.buzzmyfanclub.com", require("./servers/mixed-jsonp-json.js")));
     app.use(express.vhost("etienne-daho.buzzmyfanclub.com", require("./servers/mixed-noajax-html.js")));
     app.use(express.vhost("jenifer.buzzmyfanclub.com", require("./servers/mixed-noajax-json.js")));
     app.use(express.vhost("coeur-de-pirate.buzzmyfanclub.com", require("./servers/pure-js.js")));

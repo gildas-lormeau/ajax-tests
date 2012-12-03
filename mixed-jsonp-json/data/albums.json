@@ -1,0 +1,10 @@
+{
+	"title": "Albums",
+	"list" : [
+		{ "year": "2005", "content": "Bourré au son"}, 
+		{ "year": "2007", "content": "Aller-Retour"},
+		{ "year": "2009", "content": "Mes Repères"},
+		{ "year": "2011", "content": "La Fouine vs. Laouni"},
+		{ "year": "2013", "content": "Drôle De Parcours (upcoming)"}
+	]
+}
