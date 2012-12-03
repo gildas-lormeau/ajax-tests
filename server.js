@@ -72,6 +72,7 @@ app.configure("production", function() {
     app.use(express.vhost("willy-denzey.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("alizee.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("booba.fanclub.herokuapp.com", require("./servers/redirect.js")));
+    app.use(express.vhost("la-fouine.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("etienne-daho.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("jenifer.fanclub.herokuapp.com", require("./servers/redirect.js")));
     app.use(express.vhost("coeur-de-pirate.fanclub.herokuapp.com", require("./servers/redirect.js")));
