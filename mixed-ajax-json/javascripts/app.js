@@ -7,6 +7,7 @@
 	function updateMeta(meta) {
 		$("meta[property=\"og:title\"]").attr("content", meta.title);
 		$("meta[property=\"og:type\"]").attr("content", meta.type);
+		$("meta[property=\"og:description\"]").attr("content", meta.description);
 	}
 
 	function renderBiography(data) {
