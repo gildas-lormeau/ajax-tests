@@ -14,5 +14,9 @@
 		{ "year": "2011", "content": "Scarface"},
 		{ "year": "2012", "content": "Caramel"},
 		{ "year": "2012", "content": "C'est la vie (feat. 2 Chainz)"}
-	]
+	],
+    "meta" : {
+        "type" : "song",
+        "title": "Booba's Singles"
+    }
 }

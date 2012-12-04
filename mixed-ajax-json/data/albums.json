@@ -7,5 +7,9 @@
 		{ "year": "2008", "content": "0.9"},
 		{ "year": "2010", "content": "Lunatic"},
 		{ "year": "2012", "content": "Futur"}
-	]
+	],
+    "meta" : {
+        "type" : "album",
+        "title": "Booba's Discography"
+    }
 }

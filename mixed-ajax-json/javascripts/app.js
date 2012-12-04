@@ -4,6 +4,11 @@
 
 	var $doc = $(document), Modernizr = window.Modernizr;
 	
+	function updateMeta(meta) {
+		$("meta[property=\"og:title\"]").attr("content", meta.title);
+		$("meta[property=\"og:type\"]").attr("content", meta.type);
+	}
+
 	function renderBiography(data) {
 		var html = '<div class="row"><div class="six columns">';
 		html += '<p>' + data.paragraphs[0] + '</p>';
@@ -31,6 +36,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					updateMeta(data.meta);
 				}
 			});
 		} else if (pageName == "singles") {
@@ -39,6 +45,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					updateMeta(data.meta);
 				}
 			});
 		} else {
@@ -47,6 +54,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderBiography(data));
+					updateMeta(data.meta);
 				}
 			});
 		}
