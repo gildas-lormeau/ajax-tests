@@ -12,5 +12,10 @@
 		{ "year": "2011", "content": "Vécu"},
 		{ "year": "2011", "content": "Original"},
 		{ "year": "2012", "content": "J'avais pas les mots"}
-	]
+	],
+    "meta" : {
+        "type" : "song",
+        "title": "La Fouine's Singles",
+        "description" : "Singles: 2004 Manque d'argent, 2005 L'unité, 2007 Qui peut me stopper?, 2011 Veni, vidi, vici, 2012 J'avais pas les mots"
+    }
 }
