@@ -16,5 +16,10 @@
 		{ "year": "2009", "content": "Steal Away"},
 		{ "year": "2009", "content": "Human Nature"},
 		{ "year": "2010", "content": "You've Got a Friend"}
-	]
+	],
+    "meta" : {
+        "type" : "song",
+        "title": "Billy Crawford's Singles",
+        "description" : "Singles: 1998 Urgently in Love, 1999 Supernatural, 2001 When You're in Love with Someone, 2002 Trackin', 2003 Me passer de toi, 2004 Bright Lights, 2005 Steamy Nights, 2007 It's Time, 2009 Steal Away, 2010 You've Got a Friend"    	
+    }
 }

@@ -4,6 +4,12 @@
 
 	var $doc = $(document), Modernizr = window.Modernizr;
 
+	function updateMeta(meta) {
+		$("meta[property=\"og:title\"]").attr("content", meta.title);
+		$("meta[property=\"og:type\"]").attr("content", meta.type);
+		$("meta[property=\"og:description\"]").attr("content", meta.description);
+	}
+
 	function renderMain() {
 		var html = '<div class="row"><div class="twelve columns">';
 		html += '<h1><small>Welcome to the Billy Crawford fanclub site!</small></h1><hr />';
@@ -45,6 +51,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					updateMeta(data.meta);
 				}
 			});
 		} else if (pageName == "singles") {
@@ -54,6 +61,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					updateMeta(data.meta);
 				}
 			});
 		} else {
@@ -63,6 +71,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderBiography(data));
+					updateMeta(data.meta);
 				}
 			});
 		}
