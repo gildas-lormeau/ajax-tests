@@ -8,6 +8,7 @@
 		$("meta[property=\"og:title\"]").attr("content", meta.title);
 		$("meta[property=\"og:type\"]").attr("content", meta.type);
 		$("meta[property=\"og:description\"]").attr("content", meta.description);
+		$("meta[property=\"og:url\"]").attr("content", meta.url);
 	}
 
 	function renderBiography(data) {
