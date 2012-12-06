@@ -8,12 +8,12 @@
 		$("meta[property=\"og:title\"]").attr("content", meta.title);
 		$("meta[property=\"og:type\"]").attr("content", meta.type);
 		$("meta[property=\"og:description\"]").attr("content", meta.description);
-		$("meta[property=\"og:url\"]").attr("content", meta.url);
+		$("meta[property=\"og:url\"]").attr("content", location.href);
 	}
 
-	function renderFbButton(url) {
+	function renderFbButton() {
 		var html = '<div  class="fb-like" data-href="';
-		html += url;
+		html += location.href;
 		html += '" data-send="false" data-width="450" data-show-faces="false" data-layout="button_count"></div>';
 		return html;
 	}
@@ -38,6 +38,7 @@
 	}
 	
 	function route() {
+		var url = location.href;
 		var pageName = location.pathname.split("/").pop();
 		if (pageName == "albums") {
 			$.ajax({
@@ -45,7 +46,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
-					$("#facebook").html(renderFbButton(data.meta.url));
+					$("#facebook").html(renderFbButton());
 					updateMeta(data.meta);
 					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
@@ -56,7 +57,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
-					$("#facebook").html(renderFbButton(data.meta.url));
+					$("#facebook").html(renderFbButton());
 					updateMeta(data.meta);
 					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
@@ -67,7 +68,7 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderBiography(data));
-					$("#facebook").html(renderFbButton(data.meta.url));
+					$("#facebook").html(renderFbButton());
 					updateMeta(data.meta);
 					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
