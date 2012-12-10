@@ -8,6 +8,14 @@
 		$("meta[property=\"og:title\"]").attr("content", meta.title);
 		$("meta[property=\"og:type\"]").attr("content", meta.type);
 		$("meta[property=\"og:description\"]").attr("content", meta.description);
+		$("meta[property=\"og:url\"]").attr("content", location.href);
+	}
+
+	function renderFbButton() {
+		var html = '<div  class="fb-like" data-href="';
+		html += location.href;
+		html += '" data-send="false" data-width="450" data-show-faces="false" data-layout="button_count"></div>';
+		return html;
 	}
 
 	function renderBiography(data) {
@@ -38,7 +46,9 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					$("#facebook").html(renderFbButton());
 					updateMeta(data.meta);
+					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
 			});
 		} else if (pageName == "singles") {
@@ -48,7 +58,9 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					$("#facebook").html(renderFbButton());
 					updateMeta(data.meta);
+					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
 			});
 		} else {
@@ -58,7 +70,9 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderBiography(data));
+					$("#facebook").html(renderFbButton());
 					updateMeta(data.meta);
+					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
 			});
 		}
