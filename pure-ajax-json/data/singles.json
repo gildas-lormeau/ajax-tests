@@ -7,5 +7,10 @@
 		{ "year": "2010", "content": "Francis"},
 		{ "year": "2011", "content": "Adieu"},
 		{ "year": "2012", "content": "Golden Baby"}		
-	]
+	],
+    "meta" : {
+        "type" : "song",
+        "title": "Coeur de Pirate's Singles",
+        "description" : "The complete single's list of Coeur de Pirate : 2009 Ensemble, 2010 Francis [...]"
+    }
 }

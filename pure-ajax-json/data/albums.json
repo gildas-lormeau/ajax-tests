@@ -6,5 +6,10 @@
 		{ "year": "2010", "content": "Voil&agrave; les anges"},
 		{ "year": "2010", "content": "Brutal Hearts"},
 		{ "year": "2011", "content": "Noel Blanc"}
-	]
+	],
+    "meta" : {
+        "type" : "album",
+        "title": "Coeur de Pirate's Discography",
+        "description" : "The complete discogrphy of Coeur de Pirate : 2009 Des maisons, 2010 Dans tes reves [...]"
+    }
 }

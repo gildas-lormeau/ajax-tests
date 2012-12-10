@@ -6,5 +6,10 @@
 		"B&eacute;atrice Martin born September 22, 1989 is a Canadian singer-songwriter better known by her stage name \"Coeur de pirate\". She started playing the piano when she was only three years old.", 
 		"She became famous in 2009 when Francis Vachon, a photographer from Quebec City, used her song \"Ensemble\" as the soundtrack to a popular YouTube video. In March 2010, Coeur de pirate received the award for best original song for \"Comme des enfants\" at the \"Victoires de la Musique\"", 
 		"She announced on September 12, 2011 that her next album, titled \"Blonde\", at the end of 201. Coeur de pirate contributed vocals on \"Brutal Hearts\", the fourth track on the 2010 Bedouin Soundclash album Light the Horizon."
-	]
+	],
+    "meta" : {
+        "type" : "musician",
+        "title": "Coeur de Pirate's Biography",
+        "description" : "The complete biography of Coeur de Pirate : B&eacute;atrice Martin born September 22, 1989 is a Canadian singer-songwriter better known by her stage name \"Coeur de pirate\" [...]"
+    }
 }
