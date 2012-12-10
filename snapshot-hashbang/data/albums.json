@@ -6,5 +6,10 @@
 		{ "year": "2009", "content": "Le Cheshire Cat et moi"},
 		{ "year": "2010", "content": "Bretonne"},
 		{ "year": "2012", "content": "Ô Filles de l'Eau"}
-	]
+	],
+    "meta" : {
+        "type" : "album",
+        "title": "Nolwenn Leroy's Discography",
+        "description" : "The complete discography of Nolwenn Leroy : 2003 Nolwenn, 2005 Histoires Naturelles [...]"
+    }
 }

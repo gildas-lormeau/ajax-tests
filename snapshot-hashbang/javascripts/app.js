@@ -4,11 +4,25 @@
 
 	var $doc = $(document), Modernizr = window.Modernizr;
 	
+	function updateMeta(meta) {
+		$("meta[property=\"og:title\"]").attr("content", meta.title);
+		$("meta[property=\"og:type\"]").attr("content", meta.type);
+		$("meta[property=\"og:description\"]").attr("content", meta.description);
+		$("meta[property=\"og:url\"]").attr("content", location.href);
+	}
+
+	function renderFbButton() {
+		var html = '<div  class="fb-like" data-href="';
+		html += location.href;
+		html += '" data-send="false" data-width="450" data-show-faces="false" data-layout="button_count"></div>';
+		return html;
+	}
+
 	function renderMain() {
 		var html = '<div class="row"><div class="twelve columns">';
 		html += '<h1><small>Welcome to the Nolwenn Leroy fanclub site!</small></h1><hr />';
 		html += '</div></div><div class="row"><div class="nine columns" role="content">';
-		html += '<article class="main-article"><h3><a class="main-link" href=""></a></h3><div class="main-content">';
+		html += '<article class="main-article"><h3><a class="main-link" href=""></a></h3><div id="facebook"></div><div class="main-content">';
 		html += '</div></article></div><aside class="three columns">';
 		html += '<ul class="side-nav"><li><a href="#!">Biography</a></li><li><a href="#!albums">Albums</a></li>';
 		html += '<li><a href="#!singles">Singles</a></li></ul></aside></div>';
@@ -45,6 +59,9 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					updateMeta(data.meta);
+					$("#facebook").html(renderFbButton());
+					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
 			});
 		} else if (pageName == "singles") {
@@ -54,6 +71,9 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderList(data));
+					updateMeta(data.meta);
+					$("#facebook").html(renderFbButton());
+					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
 			});
 		} else {
@@ -63,6 +83,9 @@
 				success : function(data) {
 					$(".main-link").html(data.title);
 					$(".main-content").html(renderBiography(data));
+					updateMeta(data.meta);
+					$("#facebook").html(renderFbButton());
+					if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 				}
 			});
 		}

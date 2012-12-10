@@ -18,5 +18,10 @@
 		{ "year": "2010", "content": "Moonlight Shadow"},
 		{ "year": "2010", "content": "To France"},
 		{ "year": "2010", "content": "Juste pour me souvenir"}
-	]
+	],
+    "meta" : {
+        "type" : "song",
+        "title": "Nolwenn Leroy's Singles",
+        "description" : "The complete singles list of Nolwenn Leroy with their titles and years ..."
+    }
 }

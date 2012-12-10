@@ -6,5 +6,10 @@
 		"Born the 28th of September 1982 in Saint-Renan, Finistère, Brittany, Nolwenn Leroy is a French singer and songwriter. She gain traction after winning the second edition of the French television reality show, Star Academy.",
         "Released in March 2003, his first album, \"Nolwenn\" sold over 300 000 copies in 6 months. With this album she was certified two  times platinum by the Syndicat national de l'édition phonographique for more than 600,000 copies sold. She breaks its score with her 4th album, \"Bretonne\", with more that 1 millions sales.",
         "Leroy's music was studied for its neurological impact in geriatric populations. Researchers found that, as Mozart's music, her recordings might have a more beneficial effect than other music. Quoting the researchers : \"the music of Nolwenn Leroy appears to have a different effect on brain-based modulation of gait and stance than other music tested to date\""
-    ]
+    ],
+    "meta" : {
+        "type" : "musician",
+        "title": "Nolwenn Leroy",
+        "description" : "The complete biography of Nolwenn Leroy. Born the 28th of September 1982 in Brittany, she is a French singer [...]"
+    }
 }
