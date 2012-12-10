@@ -21,7 +21,12 @@
 		}, {
 			"year" : "2022",
 			"content" : "L'Amour et Moi"
-		} ]
+		} ],
+        "meta" : {
+            "type" : "album",
+            "title": "Jenifer's Discography",
+            "description" : "The complete discography of Jenifer : 2002 Jenifer, 2004 Le Passage [...]"
+    }
 	};
 
 	var singles = {
@@ -77,7 +82,12 @@
 		}, {
 			"year" : "2012",
 			"content" : "Sur le fil"
-		} ]
+		} ],
+        "meta" : {
+            "type" : "song",
+            "title": "Jenifer's Singles",
+            "description" : "The complete singles list of Jenifer: 2002 Destiné, 2003 Donne-moi le temps [...]"
+    }
 	};
 
 	var biography = {
@@ -87,10 +97,29 @@
 		"paragraphs" : [
 				"Jenifer, born as Jenifer Yaël Dadouche-Bartoli the 15th of November 1982 in Nice, is a pop singer revelead by the French television show Star Academy France in 2002. She got a certain success with a number of hit singles in the French, Belgium and Swiss charts.",
 				"Just after her victory, she released a first single \"J'attends L'amour\", which encountered a real success. And a few later, followed a road tour as a solo artist from October 2002 until January 2003. During this road tour she performed at the Paris Olympia, one of his dream child.",
-				"Her first album, entitled Jenifer, written by Marc Lavoine, sold over three quarters of a million copies. Re-released later to include two two new tracks: \"Entre Humains\" and \"Des Mots Qui Résonnent\", this new version sold aver a million copies." ]
+				"Her first album, entitled Jenifer, written by Marc Lavoine, sold over three quarters of a million copies. Re-released later to include two two new tracks: \"Entre Humains\" and \"Des Mots Qui Résonnent\", this new version sold aver a million copies." ],
+        "meta" : {
+            "type" : "musician",
+            "title": "Jenifer's Biography",
+            "description" : "The complet biography of Jenifer. Jenifer, born as Jenifer Yaël Dadouche-Bartoli the 15th of November 1982 in Nice, is a pop singer[...]"
+    }
 	};
 
-	function renderBiography(data) {
+	function updateMeta(meta) {
+        $("meta[property=\"og:title\"]").attr("content", meta.title);
+        $("meta[property=\"og:type\"]").attr("content", meta.type);
+        $("meta[property=\"og:description\"]").attr("content", meta.description);
+        $("meta[property=\"og:url\"]").attr("content", location.href);
+    }
+
+    function renderFbButton() {
+        var html = '<div  class="fb-like" data-href="';
+        html += location.href;
+        html += '" data-send="false" data-width="450" data-show-faces="false" data-layout="button_count"></div>';
+        return html;
+    }
+
+    function renderBiography(data) {
 		var html = '<div class="row"><div class="six columns">';
 		html += '<p>' + data.paragraphs[0] + '</p>';
 		html += '<p>' + data.paragraphs[1] + '</p>';
@@ -114,12 +143,21 @@
 		if (pageName == "albums") {
 			$(".main-link").html(albums.title);
 			$(".main-content").html(renderList(albums));
+            $("#facebook").html(renderFbButton());
+            updateMeta(albums.meta);
+            if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 		} else if (pageName == "singles") {
 			$(".main-link").html(singles.title);
 			$(".main-content").html(renderList(singles));
+            $("#facebook").html(renderFbButton());
+            updateMeta(singles.meta);
+            if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 		} else {
 			$(".main-link").html(biography.title);
 			$(".main-content").html(renderBiography(biography));
+            $("#facebook").html(renderFbButton());
+            updateMeta(biography.meta);
+            if (window.FB) FB.XFBML.parse($("#facebook").get(0));
 		}
 	}
 
