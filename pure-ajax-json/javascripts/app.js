@@ -29,7 +29,7 @@
 		html += '<meta property="og:type" content="' + meta.type + '"/>';
 		html += '<meta property="og:description" content="' + meta.description + '"/>';
 		html += '<meta property="og:url" content="' + location.href + '"/>';
-		html += '<meta property="og:image" content="http://coeur-de-pirate.buzzmyfanclub.com/images/booba.jpg"/>';
+		html += '<meta property="og:image" content="http://coeur-de-pirate.buzzmyfanclub.com/images/coeur-de-pirate.jpg"/>';
 		html += '<meta property="og:site_name" content="Coeur de Pirate fanclub site"/>';
 		html += '<meta property="fb:admins" content="george.abitbol.1671"/>';
 		return html;
