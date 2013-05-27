@@ -7,15 +7,15 @@ var app = express();
 app.use(function(req, res, next) {
     console.log(req.url);
     if(req.url.indexOf("_escaped_fragment_") != -1) {
-        var headers = {
-            authorization: "fed10eecf441b05153ab3ebd1780b43d"
-        };
-        headers["x-domain"] = "http://nolwenn-leroy.buzzmyfanclub.com";
-        var reqUrl = "http://brojax-development-api.aws.af.cm";
+        // var headers = {
+        //     authorization: "5debf07f5280cf43ac6da4eb70a72bbf"
+        // };
+        // headers["x-domain"] = "http://nolwenn-leroy.buzzmyfanclub.com";
+        var reqUrl = "http://api.seo4ajax.com/5debf07f5280cf43ac6da4eb70a72bbf";
         reqUrl += req.url;
         request.get({
-            url: reqUrl,
-            headers: headers
+            url: reqUrl//,
+            //headers: headers
         }).pipe(res);
     } else {
         next();
